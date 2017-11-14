@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Place where you can enter your message xD">
+        <meta name="keywords" content="guest, book, guestbook, java, html, css">
+        <meta name="author" content="Jakub Janiszewski">
+        <title>Guestbook</title>
+
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Lato" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Simple Guestbook</h1>
+            <br />
+            <div class="messages_container">
+                <ul class="messages_list">
+                    {% for message in messages %}
+                        <div class="entry-field">
+                            <li><b>{{ message.getContent }}</b></li>
+                            <li>Name: <b>{{ message.getUsername }}</b>, {{ message.getMessageDateAsString }}</li>
+                        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <form method="post" class="inputs">
+                <label for="#username-label">Your name:</label>
+                <br/>
+                <input type="text" name="yourname" id="#username-label" class="your-name-label">
+                <br />
+                <label for="#message-label">Your message:</label>
+                <br />
+                <input type="text" name="message" id="#message-label" class="message-label">
+                <br />
+                <input type="submit" value="Submit" class="submit-button">
+            </form>
+        </div>
+    </body>
+</html>

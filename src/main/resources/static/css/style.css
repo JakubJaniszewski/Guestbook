@@ -1,0 +1,53 @@
+:root {
+    --main-backgroud: powderblue;
+    --entry-field-background-color: #6c93d1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--main-backgroud);
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Droid Sans", sans-serif;
+    margin-left: 48px;
+}
+
+input {
+    margin: 5px;
+}
+
+.messages_list {
+    list-style-type: none
+}
+
+.messages_list li {
+    margin: 10px;
+}
+
+.message-label {
+    height: 100px;
+    width: 300px;
+    line-height: 50px;
+}
+
+.your-name-label {
+    width: 300px;
+}
+
+.inputs {
+    margin-left: 48px;
+}
+
+.entry-field {
+    margin: 5px;
+    padding: 3px;
+    background-color: var(--entry-field-background-color);
+    width: 400px;
+}
